@@ -13,7 +13,8 @@ body {
   background-color: var(--light-gray);
   display: flex;
   width: 100vw;
-  height: 100vh;
+  height: auto;
+  min-height: 100vh;
   overflow-x: hidden;
 }
 body div.card {
@@ -23,6 +24,8 @@ body div.card {
   min-height: 80vh;
   height: auto;
   margin: auto;
+  margin-top: 8px;
+  margin-bottom: 8px;
   border-radius: 10px;
   background-color: var(--dark-gray);
   padding: 14px;

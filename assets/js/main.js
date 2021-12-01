@@ -89,8 +89,7 @@ $(function () {
         //rovnice
         output += 'y = bx + a' + '<br>'
         output += `<u>y = ${b}x + ${a}<u><br>`
-
-        $('#output').html(output)
+        $('#output').html(decDotToComma(output))
 
         let conc_values = 'c:'
         conc.forEach((v, i) => {
@@ -291,6 +290,10 @@ $(function () {
 
     function round(float) {
         return parseFloat(float.toFixed(8))
+    }
+
+    function decDotToComma(number) {
+        return number.toString().replaceAll('.', ',')
     }
 
     function checkUrl() {
