@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>v1.0.2.1 | Výpočet rovnice z grafu</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500;700&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="assets/css/style.css" />
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+        <script src="assets/js/lz-string.min.js"></script>
+        <script src="assets/js/main.js"></script>
+    </head>
+    <body>
+        <div class="card">
+            <h1>Výpočet rovnice z grafu</h1>
+
+            <p class="title">Počet hodnot:</p>
+            <input type="number" name="count" value="0" id="count" />
+
+            <p class="group-title">Koncentrace:</p>
+            <div id="konc" class="values"></div>
+
+            <p class="group-title">Absorbance:</p>
+            <div id="abs" class="values"></div>
+
+            <button type="button" disabled="disabled">Vypočítat</button>
+
+            <div id="output"></div>
+
+            <p id="share" class="title">Sdílej svoje výsledky:</p>
+            <input type="text" name="link" id="link" />
+        </div>
+    </body>
+</html>

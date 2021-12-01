@@ -1,0 +1,135 @@
+:root {
+  --light-gray: #374151;
+  --dark-gray: #1f2937;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: var(--light-gray);
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+}
+body div.card {
+  display: block;
+  width: 80vw;
+  min-width: 140px;
+  min-height: 80vh;
+  height: auto;
+  margin: auto;
+  border-radius: 10px;
+  background-color: var(--dark-gray);
+  padding: 14px;
+}
+body div.card h1 {
+  font-family: "Open Sans", sans-serif;
+  color: white;
+  text-align: center;
+}
+body div.card p.group-title, body div.card p.title {
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 900;
+  font-size: x-large;
+  text-align: center;
+}
+body div.card input[type=number] {
+  background-color: var(--light-gray);
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  font-family: "Open Sans", sans-serif;
+  font-size: medium;
+  font-weight: 700;
+  color: white;
+  padding: 2px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+body div.card input[type=text] {
+  background-color: var(--light-gray);
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  font-family: "Open Sans", sans-serif;
+  font-size: medium;
+  font-weight: 700;
+  color: white;
+  padding: 2px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  min-width: 240px;
+  width: 60%;
+  height: max-content;
+  min-height: 45px;
+}
+body div.card div.values {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  height: auto;
+  min-height: 20px;
+}
+body div.card div.values div.value {
+  margin: 2px;
+  padding: 4px;
+  width: max-content;
+  height: max-content;
+  min-width: 10px;
+  border-radius: 5px;
+  border: solid 1px white;
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  font-size: medium;
+  outline: none;
+}
+body div.card div#output {
+  text-align: center;
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  font-size: medium;
+  margin-top: 10px;
+}
+body div.card button {
+  margin-top: 15px;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  background: var(--light-gray);
+  padding: 5px 10px 5px 10px;
+  min-width: 125px;
+  min-height: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+body div.card button:disabled {
+  cursor: not-allowed;
+  background: #303844;
+  color: lightgray;
+}
+body div.card button:active {
+  transform: translateY(3px);
+}
+body div.card button:hover {
+  box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.2);
+}
+
+/*# sourceMappingURL=style.css.map */
