@@ -68,13 +68,13 @@ $(function () {
         //Základní sumy
         output += 'Σx = ' + sumx + '<br>'
         output += 'Σy = ' + sumy + '<br>'
-        output += 'Σ(x<sup>2</sup>) = ' + sumx2 + '<br>'
+        output += 'Σx<sup>2</sup> = ' + sumx2 + '<br>'
         output += 'Σ(x·y) = ' + sumxky + '<br>'
 
         output += '<br>'
         //b
-        output += 'b = (Σx · Σy - n · Σ(x·y))/(Σ(x)<sup>2</sup> - n · Σx)' + '<br>'
-        output += `b = (${sumx} · ${sumy} - ${n} · ${sumxky})/(${sumx22} - ${n} · ${sumx})<br>`
+        output += 'b = (Σx · Σy - n · Σ(x·y))/((Σx)<sup>2</sup> - n · Σx<sup>2</sup>)' + '<br>'
+        output += `b = (${sumx} · ${sumy} - ${n} · ${sumxky})/(${sumx22} - ${n} · ${sumx2})<br>`
         b = round((sumx * sumy - n * sumxky) / (sumx22 - n * sumx2))
         output += 'b = ' + b + '<br>'
 
@@ -89,7 +89,7 @@ $(function () {
         //rovnice
         output += 'y = bx + a' + '<br>'
         output += `<u>y = ${b}x + ${a}<u><br>`
-        $('#output').html(decDotToComma(output))
+        $('#output').html(eto10(decDotToComma(output)))
 
         let conc_values = 'c:'
         conc.forEach((v, i) => {
@@ -294,6 +294,10 @@ $(function () {
 
     function decDotToComma(number) {
         return number.toString().replaceAll('.', ',')
+    }
+
+    function eto10(number) {
+        return number.toString().replaceAll('e', '·10^')
     }
 
     function checkUrl() {
