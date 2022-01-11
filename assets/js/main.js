@@ -88,7 +88,12 @@ $(function () {
         output += '<br>'
         //rovnice
         output += 'y = bx + a' + '<br>'
+        if (a >= 0) {
         output += `<u>y = ${b}x + ${a}<u><br>`
+        } else {
+            a = -a
+            output += `<u>y = ${b}x - ${a}<u><br>`
+        }
         $('#output').html(eto10(decDotToComma(output)))
 
         let conc_values = 'c:'
